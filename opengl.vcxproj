@@ -107,7 +107,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)src\vendor\stb_image;$(ProjectDir)src\utility_functions;$(ProjectDir)dependencies\GLFW\include;$(ProjectDir)dependencies\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\vendor\stb_image;$(ProjectDir)src\utility_functions;$(ProjectDir)src\vendor\SOIL\include;$(ProjectDir)dependencies\GLFW\include;$(ProjectDir)dependencies\GLEW\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -170,7 +170,10 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\utility_functions\file_io.cpp" />
     <ClCompile Include="src\utility_functions\glCalls.cpp" />
-    <ClCompile Include="src\vendor\stb_image\stb_image.cpp" />
+    <ClCompile Include="src\vendor\SOIL\src\image_dxt.c" />
+    <ClCompile Include="src\vendor\SOIL\src\image_helper.c" />
+    <ClCompile Include="src\vendor\SOIL\src\soil.c" />
+    <ClCompile Include="src\vendor\SOIL\src\stb_image_aug.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include="res\shaders\fragment.shader" />
@@ -189,7 +192,12 @@
   <ItemGroup>
     <ClInclude Include="src\utility_functions\file_io.h" />
     <ClInclude Include="src\utility_functions\glCalls.h" />
-    <ClInclude Include="src\vendor\stb_image\stb_image.h" />
+    <ClInclude Include="src\vendor\SOIL\include\SOIL\image_dxt.h" />
+    <ClInclude Include="src\vendor\SOIL\include\SOIL\image_helper.h" />
+    <ClInclude Include="src\vendor\SOIL\include\SOIL\SOIL.h" />
+    <ClInclude Include="src\vendor\SOIL\include\SOIL\stbi_dds_aug.h" />
+    <ClInclude Include="src\vendor\SOIL\include\SOIL\stbi_dds_aug_c.h" />
+    <ClInclude Include="src\vendor\SOIL\include\SOIL\stb_image_aug.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
